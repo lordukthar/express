@@ -79,6 +79,7 @@ app.use(
 app.get("/", function (req, res, next) {
   // Update views
   req.session.views = (req.session.views || 0) + 1;
+  req.session.jsessonid = (req.session.jsessonid || 0) + 1;
 
   // Write response
   res.end(req.session.views + " views");
